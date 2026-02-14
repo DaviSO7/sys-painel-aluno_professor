@@ -9,15 +9,23 @@
         # Professor: Menu mais complexo que tenha um campo que coloque o nome completo do aluno como identificação, para passar as notas, tenha também um campo para notas e do lado qual foi a atividade, e o ultimo campo de qual materia é as notas com um botao de enviar
         # Para ambos: Um menu na parte superior direita/esquerda que tenha uma opção de deslogar da conta
 
-
 from pymongo import MongoClient
 from datetime import datetime, timezone
 import bcrypt
 import os
 from dotenv import load_dotenv
 from tkinter import messagebox, Listbox
+import sys
 
-load_dotenv()
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+env_path = resource_path(".env")
+load_dotenv(dotenv_path=env_path)
 url = os.getenv("MONGO_URL")
 con = MongoClient(url)
 db = con.get_database("registroDeUsuarios")
