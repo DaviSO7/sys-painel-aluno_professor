@@ -51,8 +51,8 @@ Sistema desktop de gerenciamento de notas escolares, feito em **Python** com **C
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/grades-based.git
-cd grades-based
+git clone https://github.com/DaviSO7/sys-painel-aluno_professor.git
+cd sys-painel-aluno_professor
 ```
 
 ### 2. Crie um ambiente virtual (opcional, mas recomendado)
@@ -82,7 +82,7 @@ MONGO_URL=mongodb+srv://usuario:senha@cluster.mongodb.net/
 ### 5. Execute o sistema
 
 ```bash
-python main.py
+python app.py
 ```
 
 ---
